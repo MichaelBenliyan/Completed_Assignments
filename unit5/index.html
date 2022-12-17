@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chatroom</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id = 'pageMinusHeading'>
+  <div>
+    <h1>Online Chatroom</h1>
+    <!-- styling, big chatbox to show all messages , div tag and style -->
+    <div id="chatBoxContainer">
+      <div id="chatHistoryContainer">
+        <!-- keep appending new message under bottom message; scrolling feature -->
+
+        <!-- each message to have class, with layout to be determined -->
+
+      </div>
+      <!-- dialog box next to send button ,div for box and button-->
+      <div id="msgDraftContainer">
+        <div id = "myMsgContainer">
+          <!-- userinput -->
+          <input id="myMsg"> 
+        </div>
+        <div id = "sendBtn">
+          <!-- button with img as background-img, onclick function  -->
+          <img src = "https://cdn-icons-png.flaticon.com/512/1933/1933005.png" onclick="send()"> 
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+
+</body>
+<script src="./node_modules/expect/umd/expect.min.js"></script>
+<script src="./node_modules/mocha/mocha.js"></script>
+<script src="./test/polyfill.js"></script>
+<script src='./client/main.js'></script>
+
+<script>
+  // If called from Mocha Phantom-JS on the command line then add the test scripts
+  // to the end of the document.
+  if (window.callPhantom) {
+    mocha.setup('bdd')
+    addScript('./test/online-chatroom-test.js');
+    addScript('./test/runMocha.js');
+  }
+  
+  function addScript(path) {
+    var js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.src = path;
+    document.body.appendChild(js);
+  }
+
+</script>
+</html>
