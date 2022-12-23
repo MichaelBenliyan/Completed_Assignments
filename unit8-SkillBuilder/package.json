@@ -1,0 +1,22 @@
+{
+  "name": "text_adventure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/gameSpec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.0.0",
+    "jquery": "^3.6.3",
+    "mocha": "^2.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.0"
+  }
+}
