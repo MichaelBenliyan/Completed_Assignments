@@ -1,0 +1,11 @@
+body {
+  padding: 30px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+#menu {
+  margin: 10px;
+  height: 30px;
+  width: 200px;
+}
